@@ -1,0 +1,36 @@
+*{
+  font-family: Vazirmatn ;
+  border: 0;
+}
+
+:root{
+    --color-primary: #0f766e;
+    --background-primary: #ECFDF5;
+    --color-title: #14213d ;
+    --color-text: #67697B;
+    --background-body: #f8fafc ;
+    --background-card: #ffffff;
+    --background-footer: #14213d;
+    --border-main: #e5e7eb;
+    --border-success: green;
+    --border-error: red;
+    --border-focus: #00655C;
+
+}
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --color-primary: #2dd4bf;
+        --background-primary: #123D3B;
+        --color-title: #e2e8f0 ;
+        --color-text: #7F8AA4;
+        --background-body: #0F172A ;
+        --background-card: #1E293B;
+        --background-footer: #020617;
+        --border-main: #334155;
+        --border-success: #009e00;
+        --border-error: #ff2828;
+        --border-focus: #00756c;
+    }
+}
+
