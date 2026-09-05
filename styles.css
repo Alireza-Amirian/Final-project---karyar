@@ -1,28 +1,30 @@
-*{
-  font-family: Vazirmatn ;
-  border: 0;
+* {
+    font-family: Vazirmatn;
+    border: 0;
 }
-            /* ------ تعریف متغیر های رنگ ----- */
-:root{
-    --color-primary: #0f766e;    
-    --background-primary: #ECFDF5;     
-    --color-title: #14213d ;     
-    --color-text: #67697B;     
-    --background-body: #f8fafc ;    
-    --background-card: #ffffff;     
+
+/* ------ تعریف متغیر های رنگ ----- */
+:root {
+    --color-primary: #0f766e;
+    --background-primary: #ECFDF5;
+    --color-title: #14213d;
+    --color-text: #67697B;
+    --background-body: #f8fafc;
+    --background-card: #ffffff;
     --background-footer: #14213d;
     --border-main: #e5e7eb;
     --border-success: green;
     --border-error: red;
     --border-focus: #00655C;
 }
-@media (prefers-color-scheme: dark){
-    :root{
+
+@media (prefers-color-scheme: dark) {
+    :root {
         --color-primary: #2dd4bf;
         --background-primary: #123D3B;
-        --color-title: #e2e8f0 ;
+        --color-title: #e2e8f0;
         --color-text: #7F8AA4;
-        --background-body: #0F172A ;
+        --background-body: #0F172A;
         --background-card: #1E293B;
         --background-footer: #020617;
         --border-main: #334155;
@@ -31,60 +33,61 @@
         --border-focus: #00756c;
     }
 }
-body{
+
+body {
     background-color: var(--background-body);
 }
 
             /* ------هدر و نوبار----- */
-.header{
+.header {
     border-bottom: 1px solid var(--border-main);
     width: 100%;
     position: sticky;
     top: 0px;
     z-index: 100;
 }
-.navbar{
+.navbar {
     padding: 0px 64px;
     background-color: var(--background-card);
     height: 64px;
     display: flex;
     /* justify-content: flex-start; */
     /* align-items: stretch; */
-    
+
 }
-.navbar-menu{
+.navbar-menu {
     display: none;
-    background: transparent ;
+    background: transparent;
     font-size: 20px;
     cursor: pointer;
 }
-#navbar-menu{
+#navbar-menu {
     display: none;
 }
-.navbar-logo{
+.navbar-logo {
     height: 30px;
     width: 150px;
     margin: 16px 0px 0px 0px;
     color: var(--color-primary);
-    
+
 }
-.navbar-links{
+.navbar-links {
     display: flex;
     gap: 24px;
     margin-right: 32px;
 }
-.navbar-link{
+.navbar-link {
     text-decoration: none;
     color: var(--color-title);
     display: flex;
     align-items: center;
     text-wrap: nowrap;
 }
-.navbar-link:hover{
-    font-weight: 600; 
+.navbar-link:hover {
+    font-weight: 600;
     transition: all 0.3s ease;
 }
-.navbar-link-basket{
+.navbar-link-basket {
     margin-right: auto;
     background-color: var(--background-primary);
     height: fit-content;
@@ -96,31 +99,54 @@ body{
 
 
 
+                /* ----- متون ----- */
+.route-container {
+    margin: 0px 64px;
+}
+.route {
+    display: flex;
+    color: var(--color-text);
+    margin-top: 24px;
+}
+.route a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+.products-page-name {
+    color: var(--color-title);
+    padding: 8px 0px;
+}
+.products-trust-text {
+    padding: 8px 0px;
+    color: var(--color-text);
+}
 
 
 
 
 
 
-        /* ------- حالت موبایل  ----- */
-@media (max-width:780px){
-    .navbar{
+
+
+                /* ------- حالت موبایل  ----- */
+@media (max-width:780px) {
+    .navbar {
         padding: 0px 16px;
     }
-    .navbar-menu{
+    .navbar-menu {
         display: block;
         margin-right: 10px;
         align-self: center;
         color: var(--color-title);
     }
-    .navbar-menu:hover{
+    .navbar-menu:hover {
         font-size: 26px;
         transition: all 0.3s ease;
     }
-    #navbar-menu:not(:checked)+.navbar-links{
+    #navbar-menu:not(:checked)+.navbar-links {
         display: none;
     }
-    .navbar-links{
+    .navbar-links {
         flex-direction: column;
         width: 150px;
         background: var(--background-card);
@@ -131,5 +157,7 @@ body{
         gap: 12px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
-      
+    .route-container {
+        margin: 16px;
+    }
 }
